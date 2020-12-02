@@ -40,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
     //组合信息 Portfolio information
     function messageCombine(config: GitMessage) {
-        return [`${config.type}${config.scope ? '(' + config.scope + ')' : ''}: ${config.subject}`, config.body, config.footer]
+        return [`${'[' + config.type + ']'}${config.scope ? '(' + config.scope + ')' : ''}: ${config.subject}`, config.body, config.footer]
             .filter((item) => item)
             .join('\n\n');
     }
